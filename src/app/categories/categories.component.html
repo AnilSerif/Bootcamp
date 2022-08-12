@@ -1,0 +1,45 @@
+<div class="container-fluid w-100 mt-2 overflow-h">
+  <nav class="navbar navbar-expand-lg bg-light">
+
+      <div class="form-group d-flex ms-3" > 
+          <input class="form-control me-2" type="search" placeholder="Try to find..." [(ngModel)]="filterText"/>
+          <button class="btn btn-outline-success" type="submit"> Search </button>
+          
+      </div>
+   
+      <form class=" form-group d-flex ms-5 mt-1" >
+          <p class="d-inline-block mt-2"> Views:</p>
+          <button class="btn btn-outline-success ms-2" type="submit"> <i class="bi bi-arrow-counterclockwise" title="Default"></i> </button>
+          <button class="btn btn-outline-success ms-2" type="submit"><i class="bi bi-view-list" title="Sort by single"></i> </button>
+          <button class="btn btn-outline-success ms-2" type="submit"><i class="bi bi-view-stacked" title="Sort by pair"></i> </button>
+      </form>
+      
+      <select class="form-select d-flex form-select-md w-25 ms-5">
+          <option selected> Advanced Search </option>
+          <option value="1"> Increased Price </option>
+          <option value="2">Decreased Price</option>
+          <option value="3"> Product Name (A-Z) </option>
+          <option value="4"> Product Name (Z-A) </option>
+          <option value="5"> Stock Status </option>
+      </select>
+      <div class="form-group  d-flex ms-5">
+          <button class="btn btn-outline-success ms-2" type="submit"> Save The Search</button>
+          <button class="btn btn-outline-success ms-1" type="submit"> <i class="bi bi-plus" title="Add Product"></i> </button>
+      </div>
+  </nav>
+</div>
+  
+<div class="container-fluid mt-1" style="min-height:600px;">
+  <div class="row">
+      <div class="card mt-2 mx-auto"  *ngFor="let detail of detail" style="width:335px;padding:5px;">
+          <img src="{{detail.image}}" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title">{{detail.name}}</h5>
+              <p class="card-text"> <span class="fw-bold"> Price: </span> {{detail.price | currency}}</p>
+              <p class="card-text">{{detail.description | summary}}</p>
+            
+          </div>
+      </div>
+  </div>
+</div>
+<footer></footer>

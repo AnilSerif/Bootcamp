@@ -1,0 +1,18 @@
+
+<div class="container-fluid mt-2" style="min-height:520px;">
+    <h3 class="mt-2 text-decoration-underline" style="margin-left:10px;"> {{title}} </h3>
+    <div class="row">
+        <div class="card mt-2" *ngFor="let member of member" style="width: 310px; margin-left:12px; padding:5px;">
+            <img src="{{member.image}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"> {{member.name}} {{member.surname}} </h5>
+                <p class="card-text">{{member.title}}</p>
+                <p class="card-text">{{member.country}}/{{member.city}}</p>
+                <p class="card-text">{{member.birthdate | date}}</p>
+
+               
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>

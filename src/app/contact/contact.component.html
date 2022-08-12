@@ -1,0 +1,16 @@
+<div class="container-fluid mt-2" style="min-height:520px;">
+    <div class="row">
+        <div class="card mt-2" *ngFor="let member of member" style="width: 310px; margin-left:12px; padding:5px;">
+            <img src="{{member.image}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{member.name}} {{member.surname}} </h5>
+                <p class="card-text"> <i class="bi bi-phone-fill fs-5"></i> {{member.phone}}</p>
+                <p class="card-text">{{member.mail}} - <i class="bi bi-linkedin"></i> </p>
+               
+
+               
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>

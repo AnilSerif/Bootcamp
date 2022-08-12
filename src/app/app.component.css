@@ -1,0 +1,13 @@
+a{
+    transition: box-shadow .3s;
+  width: auto;
+  height: auto;
+  
+  text-decoration:none;
+  color:black;
+}
+
+a:hover{
+    box-shadow: 0 0 11px rgba(33,34,33,.2); 
+    
+}
